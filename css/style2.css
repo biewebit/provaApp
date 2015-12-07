@@ -1,0 +1,983 @@
+/**
+======================================================================
+RESET
+======================================================================
+**/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, em, img, small, strong, sub, sup, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption,  tbody,  tfoot, thead, tr, th, td,
+article,  aside, embed, footer, header, hgroup, menu, nav, section,  summary, audio,  video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/**
+======================================================================
+GENERAL STYLING
+======================================================================
+**/
+
+html,
+body { 
+	background-color: #111;
+	height: 100%; 
+}
+
+body {
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+	font-size: 14px;
+}
+
+img { max-width: 100%; }
+a { text-decoration: none; }
+ul { list-style: none; }
+
+p { 
+	color: #fff;
+	font-size: 1em; /* 14 / 14 */ 
+	line-height: 18px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 700;
+	padding-bottom: 10px;
+}
+
+
+/**
+======================================================================
+GENERAL CLASSES
+======================================================================
+**/
+
+/**
+----------------------------------------------------------------------
+LAYOUT
+----------------------------------------------------------------------
+**/
+
+.block-inner {
+	margin: 0 auto;
+	max-width: 940px;
+}
+
+.fl { float: left; }
+.fr { float: right; }
+.cb { clear: both; }
+.oh { overflow: hidden; }
+.db { display: block; }
+
+/* TABLES */
+
+.t-layout{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.t-row { display: table-row; }
+.t-col { display: table-cell; }
+.t-col-align-top { vertical-align: top; }
+.t-col-align-mid { vertical-align: middle; }
+.t-col-align-bot { vertical-align: bottom; }
+
+/**
+----------------------------------------------------------------------
+ALIGNMENT
+----------------------------------------------------------------------
+**/
+
+.tac { text-align: center; }
+
+/**
+----------------------------------------------------------------------
+TYPOGRAPHY
+----------------------------------------------------------------------
+**/
+
+.italic { text-style: italic; }
+
+/**
+----------------------------------------------------------------------
+ICONS
+----------------------------------------------------------------------
+**/
+
+.ic-facebook a,
+.ic-instagram a {
+	display: inline-block;
+	height: 13px;
+	text-indent: -9999px;
+	width: 13px;
+}
+
+.ic-facebook a { background: url("../images/facebook.png") no-repeat; background-size:13px;}
+.ic-instagram a { background: url("../images/instagram.png") no-repeat; background-size:13px; }
+
+
+
+/**
+======================================================================
+HEADER
+======================================================================
+**/
+
+.header-container {
+	/*background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.4);*/
+    background-color: rgba(54, 47, 45, 0.6);
+	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+	padding: 5px 0;
+	position: relative;
+	z-index: 1;
+}
+
+/**
+----------------------------------------------------------------------
+LOGO
+----------------------------------------------------------------------
+**/
+
+.logo { float: left; }
+
+.logo,
+.logo h1,
+.logo h1 a {
+	display: inline-block;
+}
+
+.logo h1 { padding-bottom: 0; }
+
+.logo h1 a {
+	background: url("../images/logo_famo_menu.png") no-repeat;
+    background-size:86px 22px;
+
+	height: 22px !important ;
+	text-indent: -9999px;
+	width: 86px !important ;
+}
+
+
+
+/**
+----------------------------------------------------------------------
+NAVIGATION
+----------------------------------------------------------------------
+**/
+
+.main-nav { float: left; }
+
+.main-nav li { 
+	float: left; 
+	margin: 0 16px;
+}
+
+.main-nav li a {
+	color: #fff;
+	font-size: 12px;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+}
+
+.main-nav li a:hover {
+	color: #e0ad3f; /* Yellow */
+}
+
+.main-nav li.selected a { 
+	border-top: 2px solid #fff; 
+	color: #fff;
+	cursor: default;
+}
+
+.social-icons li { 
+	float: left; 
+	padding-right: 5px;
+}
+
+/**
+----------------------------------------------------------------------
+MOBILE NAVIGATION
+----------------------------------------------------------------------
+**/
+
+.nav-trigger,
+.mobile-navigation { display: none; }
+
+.mm-page { height: 100%; }
+
+.nav-trigger a,
+.mm-title {
+	color: #fff;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+}
+
+.mm-list li a {
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+}
+
+.mm-list li a:hover {
+	background: #ebb540; /* Yellow */
+	color: #333;
+}
+
+.mobile-nav .selected a { 
+	background-color: #444; 
+	color: #fff;
+}
+
+.mobile-nav .selected a:hover { 
+	background-color: #444; 
+	color: #fff;
+	cursor: pointer;
+}
+
+
+
+
+
+/**
+======================================================================
+US SLIDER
+======================================================================
+**/
+
+.nav-and-social {
+	padding-top: 5px;
+	position: absolute;
+	right: 0;
+	width: 650px;
+}
+
+.main-slider,
+.main-slider-list,
+.item { height: 100%; }
+
+.main-slider-list {
+	position: absolute;
+	top: 0;
+	left: 0; 
+	/*z-index: -1;*/
+	width: 100%;
+}
+
+.main-slider-list li {
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+	height: 100%;
+	width: 100%
+}
+
+/*.bg1 { background: url("../images/us-history-bg.jpg") no-repeat; }
+.bg2 { background: url("../images/us-meal-bg.jpg") no-repeat; }
+.bg3 { background: url("../images/us-mission-bg.jpg") no-repeat; }
+.bg4 { background: url("../images/us-team-bg.jpg") no-repeat; }*/
+
+
+.bg1 { background: url("../images/us-history-bg.jpg") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; }
+.bg2 { background: url("../images/us-meal-bg.jpg") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; }
+.bg3 { background: url("../images/us-mission-bg.jpg") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; }
+.bg4 { background: url("../images/us-team-bg.jpg") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+
+/**
+----------------------------------------------------------------------
+HISTORY
+----------------------------------------------------------------------
+**/
+
+#us-slider .bg1 .slider-content {
+	margin-top: 60px;
+	text-align: center;
+}
+
+.slider-content h1 {
+	color: #fff;
+	display: inline-block;
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+/*.history .slider-content h1 {
+	border-bottom: 2px solid #fff;	
+	padding-bottom: 20px;
+	padding-left: 115px;
+	padding-right: 115px;
+}
+
+.history .slider-content { 
+	padding-left: 55px;
+	padding-right: 55px;
+}*/
+
+
+
+
+/**
+----------------------------------------------------------------------
+MISSION
+----------------------------------------------------------------------
+**/
+
+.item.mission { padding-top: 132px; }
+
+.mission .slider-content p { padding-right: 560px; }
+
+.history  .slider-content p,
+.mission .slider-content p,
+.meal .slider-content p,
+.team .slider-content p {
+	font-size: 18px;
+	line-height: 24px;
+	padding-bottom: 20px;
+	/*text-align: center;*/
+}
+
+/**
+----------------------------------------------------------------------
+MEAL
+----------------------------------------------------------------------
+**/
+
+.item.meal { padding-top: 137px; }
+.meal .slider-content p { padding-right: 560px; }
+
+
+/**
+----------------------------------------------------------------------
+TEAM
+----------------------------------------------------------------------
+**/
+
+.item.team { padding-top: 42px; }
+.team .slider-content { text-align: center; }
+.team .slider-content p { padding: 0 125px; }
+
+/**
+----------------------------------------------------------------------
+BULLET PAGINATION
+----------------------------------------------------------------------
+**/
+
+.pagination { background-color: none !important; }
+
+.main-slider-pagination { 
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	z-index: 2;
+}
+
+.main-slider-pagination a {
+	background-color: #362f2d;
+	/*background: rgba(54, 47, 45, 0.2);*/
+    background: rgba(54, 47, 45, 0.6);
+    border-radius: 100000px;
+	display: inline-block;
+	margin-right: 3px;
+	height: 10px;
+	width: 10px;
+}
+
+.main-slider-pagination a.selected {
+	background-color: #362f2d;
+   
+	/*background: rgba(54, 47, 45, 0.5);*/
+    background :#ffffff
+}
+
+.main-slider-pagination a span { display: none; }
+
+
+/**
+----------------------------------------------------------------------
+NEXT/PREV ARROWS FOR "MY PLACE" SLIDER
+----------------------------------------------------------------------
+**/
+
+a.place-slider-arrow-prev, 
+a.place-slider-arrow-next {
+	background: url("../images/slider-arrow-sprite.png") no-repeat transparent;
+	height: 82px;
+	display: block;
+	margin-top: -41px;
+	position: absolute;
+	top: 50%; 
+	width: 94px;
+}
+
+a.place-slider-arrow-prev { 
+	background-position: 0 0; 
+	left: 10px;
+}
+
+a.place-slider-arrow-prev:hover { background-position: 0 -82px; }
+
+a.place-slider-arrow-next { 
+	background-position: -94px 0; 
+	right: 10px;
+}
+
+a.place-slider-arrow-next:hover { background-position: -94px -82px; }
+
+a.place-slider-arrow-prev.disabled,
+a.place-slider-arrow-next.disabled { cursor: default; }
+
+a.place-slider-arrow-prev span,
+a.place-slider-arrow-next span { display: none; }
+
+/**
+======================================================================
+FOOTER
+======================================================================
+**/
+
+.footer-container { 
+	/*background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.2); */
+    
+    background-color: rgba(54, 47, 45, 0.6);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: right ;
+}
+
+.footer p { 
+	font-family: "Montserrat", sans-serif;
+	font-size: 11px; 
+}
+
+/**
+======================================================================
+LANDING PAGE
+======================================================================
+**/
+
+.landing-bg {
+	/*background-image  : url("../images/landing-page-bg.jpg") ;
+	background-size: inherit ;
+	height: 100%;
+	width: 100%;*/
+    background: url(../images/landing-page-bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.landing-page h1 {
+	background: url("../images/landing-page-logo.png") no-repeat center 0;
+	border-bottom: 1px solid #fff;
+	display: block;
+	height: 90px;
+	margin: 0 auto;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	text-indent: -9999px;
+	width: 260px;
+}
+
+.landing-page h2,
+.landing-page h3 {
+	color: #fff;
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+	font-style: italic;
+	font-weight: 400;
+	text-align: center;
+}
+
+.landing-page h2 { 
+	font-size: 34px; 
+	margin: 20px 0 194px;
+}
+
+.landing-page h3 { font-size: 25px; }
+
+
+/**
+----------------------------------------------------------------------
+BUTTONS
+----------------------------------------------------------------------
+**/
+
+.landing-btns-container li { float: left; }
+
+.landing-btns a,
+.enter-btn a {
+	color: #fff;
+	font-family: "Montserrat", sans-serif;
+	font-size: 24px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;	
+}
+
+.landing-btns a {
+	border: 1px solid #fff;
+	padding: 8px 25px;
+}
+
+/*.landing-btn-center a { 
+	margin-left: 60px;
+	margin-right: 60px;  
+}*/
+
+.enter-btn { 
+	margin: 0 auto;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	width: 130px; 
+}
+
+.enter-btn a { 
+	border: 1px solid #fff;
+	padding: 16px 8px; 
+}
+
+.landing-btns a:hover,
+.enter-btn a:hover {
+	color: #ebb540; /* Yellow */
+	border: 1px solid #ebb540; /* Yellow */
+}
+
+
+
+/**
+======================================================================
+BOOKS PAGE
+======================================================================
+**/
+
+.books-page-container,
+.books-page,
+.booking-section-container,
+.booking-section,
+.booking-section-list,
+.booking-section-list li { height: 100%; }
+
+.booking-section-list li { 
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.booking-section-list li div {
+	-webkit-transition: background-color 0.5s ease-out;
+	-moz-transition: background-color 0.5s ease-out;
+	-o-transition: background-color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
+}
+
+.booking-section-list li:hover div {
+	/*background-color: rgba(224,173,63,0.2);
+    background-color: rgba(0,0,0,0.6);	*/
+	-webkit-transition: background-color 0.3s ease;
+	-moz-transition: background-color 0.3s ease;
+	-o-transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease;
+}
+
+.booking-section-container {
+	position: absolute;
+	/*z-index: 1;*/
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.booking-list { display: table; }
+
+.books-content {
+	position: relative;
+	/*width: 94%;*/
+	z-index: 2;
+}
+
+.booking-content { 
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.FAMO-fiftyone { 
+	background: url("../images/bookB.jpg") no-repeat; 
+	background-size: cover;	
+}
+.FAMO-fiftyone:hover div {
+    background-image:url(../images/famo51-bg.jpg);
+	background-size: cover;
+}
+
+.FAMO-metro { 
+	background: url("../images/book1B.jpg") no-repeat; 
+	background-size: cover;	
+}
+.FAMO-metro:hover div {
+    background-image:url(../images/famo-metro-bg.jpg);
+	background-size: cover;
+}
+
+.FAMO-white { 
+	background: url("../images/book2B.jpg") no-repeat; 
+	background-size: cover;	
+}
+.FAMO-white:hover div {
+    background-image:url(../images/famo-white-bg.jpg);
+	background-size: cover;
+}
+
+.books-bg {
+	/*background: url("../images/books-bg.jpg") no-repeat center center;*/
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.books-page h1 {
+	color: #fff;
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	margin-top: 50px;
+	padding-bottom: 25px;
+	text-align: center;
+}
+
+.books-page h2  {
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 700;
+	line-height: 24px;
+	margin: 0 0 64px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.booking-list { text-align: center; }
+
+.booking-list h3 {
+	height: 55px;
+	margin: 0 auto;
+	margin-bottom: 13px;
+	text-indent: -9999px;
+	width: 180px;
+}
+
+.booking-list p,
+.booking-list a { 
+	color: #fff; 
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+}
+
+.booking-email a {
+	-webkit-transition: color 0.5s ease-out;
+	-moz-transition: color 0.5s ease-out;
+	-o-transition: color 0.5s ease-out;
+	transition: color 0.5s ease-out;
+}
+
+.booking-email a:hover {
+	color: #e0ad3f; /* Yellow */
+	-webkit-transition: color 0.3s ease;
+	-moz-transition: color 0.3s ease;
+	-o-transition: color 0.3s ease;
+	transition: color 0.3s ease;
+}
+
+.FAMO-fiftyone.booking-list h3 {
+	background: url("../images/logo_famo_51_booking.png") no-repeat center top;
+}
+
+.FAMO-metro.booking-list h3 {
+	background: url("../images/famo_metro_booking.png") no-repeat center top;
+}
+
+.FAMO-white.booking-list h3 {
+	background: url("../images/famo_booking.png") no-repeat center top;
+}
+
+.books-btn {
+	border: 1px solid #fff;
+	color: #fff;
+	display: block;
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	margin: 0 auto;
+	margin-top: 35px;
+	padding: 16px 8px; 
+	text-align: center;
+	text-transform: uppercase;
+	width: 96px;	
+}
+
+.books-btn:hover {
+	border: 1px solid #e0ad3f; /* Yellow */
+	color: #e0ad3f; /* Yellow */
+}
+
+
+/**
+======================================================================
+HOME PAGE
+======================================================================
+**/
+
+.home-bg {
+	background: url("../images/home-bg.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.home-page h1 {
+	color: #fff;
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 55px;
+	margin-top: 80px;
+	text-align: center;
+	text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.home-page-content p {
+	font-size: 18px;
+	font-style: italic;
+	line-height: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+
+
+/**
+======================================================================
+NEWSLETTER PAGE
+======================================================================
+**/
+
+.newsletter-bg {
+	background: url("../images/newsletter-bg.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.newsletter-page h1 {
+	color: #e0ad3f; /* Yellow */
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 55px;
+	margin-top: 80px;
+	text-align: center;
+	text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.newsletter-page h1:after {
+	background: #fff;
+	content: "";
+	display: block;
+	height: 2px;
+	margin: 35px auto 0;
+	width: 365px;
+}
+
+.newsletter-page-content p {
+	font-size: 18px;
+	font-style: italic;
+	line-height: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.newsletter-form {
+	text-align: center;
+}
+
+.newsletter-form label {
+	display: block;
+	font-size: 12px;
+	font-family: "Montserrat", sans-serif;
+	margin: 0 auto;
+	text-align: left;
+	width: 362px;
+}
+
+.newsletter-form input[type="text"] {
+	border: 2px solid #e7b340; /* Yellow */
+	color: #333;
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+	font-size: 14px;
+	padding: 6px 15px;
+	width: 362px;
+}
+
+.newsletter-form .signup-btn { 
+	display: inline-block; 
+	margin-top: 55px;
+}
+
+.newsletter-form input[type="submit"] {
+	background: none;
+	border: none;
+	border: 1px solid #fff;
+	color: #fff;
+	display: block;
+	font-family: "Montserrat", sans-serif;
+	font-size: 24px;
+	padding: 5px 10px;
+	text-align: center;
+	text-transform: uppercase;	
+}
+
+.newsletter-form input[type="submit"]:hover {
+	cursor: pointer;
+	border: 1px solid #e0ad3f; /* Yellow */
+	color: #e0ad3f; /* Yellow */
+}
+
+
+
+/**
+======================================================================
+MY PLACE
+======================================================================
+**/
+
+.place-bg1 { background: url("../images/myplace01.jpg") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; }
+.place-bg2 { background: url("../images/myplace02.jpg") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; }
+.place-bg3 { background: url("../images/myplace03.jpg") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; }
+.place-bg4 { background: url("../images/myplace04.jpg") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; }
+.place-bg1 .slider-content,
+.place-bg2 .slider-content,
+.place-bg3 .slider-content,
+.place-bg4 .slider-content { margin-top: 160px; }
+
+.place-bg1 .slider-content h1,
+.place-bg2 .slider-content h1,
+.place-bg3 .slider-content h1,
+.place-bg4 .slider-content h1 {
+	color: #e0ad3f; /* Yellow */
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.place-bg1 .slider-content p,
+.place-bg2 .slider-content p,
+.place-bg3 .slider-content p,
+.place-bg4 .slider-content p {
+	color: #fff;
+	font-size: 24px;
+	font-family: "Noto Serif", "Georgia", "Times New Roman", sans-serif;
+	line-height: 30px;
+}
+
+.slider-right-content { 
+	text-align: right;
+	/*margin-top: 65px; */
+}
+
+/**
+======================================================================
+MEDIA QUERIES
+======================================================================
+**/
+
+@media screen and (max-width: 991px) {
+	
+     .footer-container
+    {
+	display:none;
+	}
+	.mission .slider-content,
+	.meal .slider-content {
+		margin-left: 30px;
+	}
+
+	.mission .slider-content p,
+	.meal .slider-content p { padding-right: 300px; }
+
+}
+
+@media screen and (max-width: 640px) {
+	
+    .footer-container
+    {
+	display:none;
+	}
+
+	.history .slider-content { padding-left: 10px; }
+
+	.nav-trigger,
+	.mobile-nav { display: block; }
+
+	.nav-and-social { display: none; }
+
+	.logo { 
+		display: block; 
+		float: none;
+		text-align: center;
+	}
+
+	.mission .slider-content p, 
+	.meal .slider-content p { padding-right: 50px; }
+	.team .slider-content p { padding: 0 35px; }
+
+	.footer p { text-align: center; }
+
+}
+
+@media screen and (max-width: 480px) {
+	 .footer-container
+    {
+	display:none;
+	}
+     
+     .history .slider-content h1 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+    .books-content{
+		display:none;
+	}
+
+    }
